@@ -84,7 +84,7 @@ module Mime
       private
 
       def parse_bytes(bytes)
-        content_blocks = bytes.split(/------=.*\n?/)
+        content_blocks = bytes.split(/--.*\n?/)
         content_blocks.each do |cb|
           header, body = cb.split(/\r\n\r\n/)
           # skip blank.. could be nested mime parts

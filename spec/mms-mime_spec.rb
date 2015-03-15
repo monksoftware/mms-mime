@@ -12,7 +12,7 @@ RSpec.describe Mime::Mms::Parser, "when first created" do
 end
 
 RSpec.describe Mime::Mms::Parser, "when initialized from files" do
-  %w(mms-1 mms-2 mms-3 mms-4 mms-5).each do |file|
+  %w(mms-1 mms-2 mms-3 mms-4 mms-5 mms-6).each do |file|
     it "should parse file #{file}" do
       p = Mime::Mms::Parser.new :file => "#{ROOT_DIR}/spec/fixtures/#{file}.bin"
       m = p.parse
